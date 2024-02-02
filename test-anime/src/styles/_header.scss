@@ -1,0 +1,134 @@
+@function toVw($size) {
+  @return $size*100/1170 * 1vw;
+}
+
+@function toVwMobile($size) {
+  @return $size*100/400 * 1vw;
+}
+
+
+.header-bg {
+  background: linear-gradient(90deg, #0DD0BA 0%, #2A86E5 100%);
+  width: 100%;
+
+
+  .header-wrapper {
+    width: 1170px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+
+
+    .header-items-part {
+      display: flex;
+    }
+
+    .header-items-part {
+      align-items: center;
+
+      li a {
+        cursor: pointer;
+        margin-right: 31px;
+        color: #FFF;
+        font-family: "Red Hat Display", sans-serif;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 18px;
+        letter-spacing: toVw(0.5);
+
+
+        svg {
+          margin-right: 4px;
+        }
+      }
+    }
+
+    .header-icon-part {
+      display: flex;
+      align-items: center;
+
+      li a {
+        width: 29px;
+        height: 29px;
+        flex-shrink: 0;
+
+        svg {
+
+          cursor: pointer;
+          flex-shrink: 0;
+
+        }
+      }
+
+      li {
+        .switch {
+          position: relative;
+          display: inline-block;
+          width: 44px;
+          height: 24px;
+        }
+
+        .switch input {
+          opacity: 0;
+          width: 0;
+          height: 0;
+        }
+
+        .switch input:checked + .slider {
+          background: var(--183-a-5-d, #183A5D);
+        }
+
+        .switch input:checked + .slider:before {
+          transform: translateX(20px);
+          border-radius: 50%;
+          background: #FFFFFF;
+          background-image: url("../assets/loon.svg");
+          background-repeat: no-repeat;
+          background-position: center;
+          position: absolute;
+          content: "";
+          height: 29px;
+          width: 29px;
+          right: 0px;
+          bottom: 0px;
+        }
+
+        .switch .slider {
+          position: absolute;
+          cursor: pointer;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          width: 54px;
+          height: 29px;
+          background-color: #FFFFFF;
+          transition: 0.4s;
+          border-radius: 20px;
+          box-shadow: 0 0 0.25em rgba(67, 71, 85, 0.27), 0.2px 0.2em 24px 0 rgba(1, 29, 77, 0.15);
+        }
+
+        .switch .slider:before {
+          position: absolute;
+          content: "";
+          height: 29px;
+          width: 29px;
+          left: 0px;
+          bottom: 0px;
+          background: #183A5D;
+          background-image: url("../assets/sun.svg");
+          background-repeat: no-repeat;
+          background-position: center;
+          transition: 0.4s;
+          border-radius: 50%;
+          text-align: center;
+          line-height: 16px;
+        }
+
+      }
+
+    }
+
+  }
+}
