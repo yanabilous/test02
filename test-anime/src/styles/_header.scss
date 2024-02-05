@@ -1,19 +1,21 @@
-@function toVw($size) {
-  @return $size*100/1170 * 1vw;
-}
-
-@function toVwMobile($size) {
-  @return $size*100/400 * 1vw;
-}
+//@function toVw($size) {
+//  @return $size*100/1170 * 1vw;
+//}
+//
+//@function toVwMobile($size) {
+//  @return $size*100/400 * 1vw;
+//}
 
 
 .header-bg {
   background: linear-gradient(90deg, #0DD0BA 0%, #2A86E5 100%);
   width: 100%;
+  padding-bottom: 10px;
+  padding-top: 11px;
 
 
   .header-wrapper {
-    width: 1170px;
+    max-width: 1170px;
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
@@ -47,10 +49,12 @@
     .header-icon-part {
       display: flex;
       align-items: center;
+      height: 29px;
+      margin-top: 10px;
 
       li a {
         width: 29px;
-        height: 29px;
+        //height: 29px;
         flex-shrink: 0;
 
         svg {

@@ -1,0 +1,84 @@
+.banner-bg {
+
+  border-radius: 40px;
+  background: #FFF;
+  box-shadow: 0px 22px 59px 0px rgba(42, 134, 229, 0.07);
+  max-width: 1170px;
+  margin: 0 auto;
+  margin-top: 44px;
+
+
+  .banner {
+    position: relative;
+    border-radius: 40px;
+    height: 184px;
+    background-image: url("../assets/banner1.png");
+    display: flex;
+
+    .banner-opacity {
+      border-radius: 40px;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 1;
+      opacity: 0.8;
+      background: #161C3A;
+      width: 100%;
+      height: 100%;
+    }
+
+    .banner-left {
+      display: flex;
+      position: absolute;
+      z-index: 2;
+
+      img {
+        border-radius: 10px;
+      }
+    }
+
+    .banner-right {
+      display: flex;
+      position: absolute;
+      z-index: 2;
+    }
+  }
+
+  .banner-nav {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 15px;
+    padding-bottom: 13px;
+    margin-left: 56px;
+
+    ul {
+      display: flex;
+
+      li {
+        color: var(--707070, #707070);
+        text-align: center;
+        font-family: "Red Hat Display";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 26px; /* 162.5% */
+        margin-right: 19px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+      }
+
+      .line::before {
+        content: " ";
+        display: inline-block;
+        width: 1px;
+        height: 21px;
+        background: var(--707070, #707070);
+        margin-right: 17px;
+      }
+    }
+    .widget{
+
+    }
+  }
+}
